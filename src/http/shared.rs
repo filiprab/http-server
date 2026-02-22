@@ -7,7 +7,7 @@ pub enum HttpVersion {
 }
 
 #[derive(Debug, Clone, Copy)]
-struct HeaderIndex {
-    name: (usize, usize),
-    value: (usize, usize),
+pub struct HeaderIndex {
+    pub name: (usize, usize),
+    pub value: (usize, usize),
 }
