@@ -1,8 +1,8 @@
 
 
-use super::shared::HTTPVersion;
+use super::shared::{HttpVersion, HttpHeaders};
 
-pub enum HTTPMethod {
+pub enum HttpMethod {
     GET,
     HEAD,
     POST,
@@ -16,10 +16,10 @@ pub enum HTTPMethod {
 
 
 pub struct HTTPRequest<'a> {
-    method: HTTPMethod,
+    method: HttpMethod,
     uri: Vec<u8>,
-    version: HTTPVersion,
-    headers: HTTPHeaders,
+    version: HttpVersion,
+    headers: ,
     body: Option<Vec<u8>>,
 }
 
