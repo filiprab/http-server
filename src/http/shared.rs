@@ -1,3 +1,4 @@
+#[derive(Debug)]
 pub enum HttpVersion {
     HTTP0_9,
     HTTP1_0,
@@ -8,6 +9,16 @@ pub enum HttpVersion {
 
 #[derive(Debug, Clone, Copy)]
 pub struct HeaderIndex {
-    pub name: (usize, usize),
-    pub value: (usize, usize),
+    name: (usize, usize),
+    value: (usize, usize),
+}
+
+impl HeaderIndex {
+    pub fn name(&self) -> (usize, usize){
+        self.name
+    }
+    
+    pub fn value(&self) -> (usize, usize){
+        self.value
+    }
 }
